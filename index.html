@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たべものWordle</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="title" id="title">4文字の食べ物(ひらがな)を当ててください</div>
+
+    <div class="input-area">
+        <input type="text" id="wordInput" >
+        <button id="submitBtn">実行</button>
+    </div>
+
+     <div class="board">
+        <div class="row"  id="row0">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row" id="row1">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+
+        </div>
+        <div class="row" id="row2">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+
+        </div>
+        <div class="row" id="row3">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            
+
+        </div>
+        <div class="row" id="row4">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+
+    
+    <h1 id="result" class="hidden"></h1>
+    <div class="resetDiv">
+        <button id="resetButton"></button>
+    </div>
+    <button id="ruleButton">ルール説明</button>
+    <button id="foodsList">語群一覧</button>
+
+    <div id="kanaBoard">
+        <!-- JavaScriptで50音分のボタンをここに生成 -->
+      </div>
+
+<div id="modalContainer">
+    <!-- ルール説明を表示 -->
+</div>
+<div id="foodsModalContainer">
+    <!-- 食べもの一覧を表示 -->
+</div>
+
+
+
+
+<script type='module' src="index.js"></script>
+</body>
+</html>

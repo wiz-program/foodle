@@ -1,0 +1,46 @@
+Wordleのたべもの版
+
+実装内容
+・入力した内容がお題に合っているかどうかによって色分け機能
+・入力文字ひとつひとつを比べている
+・実行ボタンもしくはEnterキーで上記の動作を行う機能
+・正解したらアラートが表示、答えが表示されて終了機能
+・キーボードにも色分け表示、入力、削除機能
+・5回間違えたら強制終了、答えが表示される機能
+・ゲーム終了時、もう一度遊ぶボタンを押すとリセットされる機能
+・ルール説明ボタンを押すとルール内容表示、削除機能
+・ボタンを押して食べもの一覧表示、削除機能(時間的に食べものはHTMLに直書き)
+・キーボード入力、ボタンクリックを少しリッチに
+・スマホ、タブレット用にレスポンシブ対応
+・数年前に作成した神経衰弱もボタンクリックで切り替え
+
+AIに聞いた内容
+・中央寄せにする方法
+・flexの書き方
+・枠の余白の広げ方
+・input要素に入力した文字を送信ボタンを押して列に反映される方法
+・Enterキーを押したときにも送信ボタンを押した時と同じ反応をする方法
+・全体的にリファクタリング
+・4文字の食べものを提案
+・ルール説明を考えてもらってそのままHTMLに反映
+・ルール説明を別ファイルで管理し、非同期で取得して反映する方法
+・エラー解消
+```javascript
+const row = document.getElementById(`row${counter}`)
+const cells = document.getElementsByClassName('cell')
+```
+↓ cells = dpcument.getEle...をcells = row.getEle...に修正を発見してもらう
+```javascript
+const row = document.getElementById(`row${counter}`)
+const cells = row.getElementsByClassName('cell')
+```
+
+感想
+・HTML,CSS,JavaScriptの書き方を忘れていたので日々の復習が重要だと感じました。
+・Reactで書いたらすごく楽だと思いました。
+　コンポーネントで管理するので、ファイル管理が楽
+　2種類あったモーダルを <Modal />コンポーネントなどに分離して再利用できる
+　モーダルの表示を is Open? ? <Modal /> : nullと簡単に切り替え
+　document.getElementByIdが不要
+　addEventListener('click', () = {関数})が不要で
+　<div onClick={関数}>  </div>,onChangeを書くだけいい

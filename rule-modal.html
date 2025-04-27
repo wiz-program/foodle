@@ -1,0 +1,45 @@
+<div id="overlay" class="hidden overlay">
+    <div id="modal" class="modal">
+
+        <h1>Foodle（フードル）のルール</h1>
+        
+        <p>
+            Foodleは<strong>4文字</strong>の「食べもの（ひらがな）」を当てる言葉当てゲームです。
+            <br>
+            最大<strong>5回まで</strong>チャレンジできます。
+        </p>
+        
+        <h2>判定の色の意味</h2>
+        <ul>
+            <li><span class="color-box correct"></span> 緑（<code>correct</code>）：文字も位置も正解</li>
+            <li><span class="color-box present"></span> 黄（<code>present</code>）：文字はあるけど場所が違う</li>
+            <li><span class="color-box absent"></span> 灰（<code>absent</code>）：その文字は答えに含まれていない</li>
+        </ul>
+        
+        <h2>例</h2>
+        <p>答えが「あんぱん」のとき、入力が「あんまん」だと</p>
+        <div class="example">
+            「あ」→ <span class="color-box correct"></span>緑<br>
+            「ん」→ <span class="color-box correct"></span>緑<br>
+            「ま」→ <span class="color-box absent"></span>灰<br>
+            「ん」→ <span class="color-box correct"></span>緑
+        </div>
+
+        <div class="example">
+            <p>答えが「あんぱん」のとき、入力が「んんんん」だと</p>
+            「ん」→ <span class="color-box present"></span>黄<br>
+            「ん」→ <span class="color-box correct"></span>緑<br>
+            「ん」→ <span class="color-box present"></span>黄<br>
+            「ん」→ <span class="color-box correct"></span>緑<br>
+        </div>
+
+
+        
+        <h2>勝利と終了</h2>
+        <ul>
+            <li>正解すれば<strong>勝利🎉</strong>！</li>
+                <li>5回間違えると<strong>ゲーム終了</strong>、正解の言葉が表示されます</li>
+        </ul>
+        <button id="closeButton">閉じる</button>
+    </div>
+</div>
